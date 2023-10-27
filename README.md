@@ -1,5 +1,7 @@
 # pgModeler Docker container
 
+![Docker Pulls](https://img.shields.io/docker/pulls/apazga/docker-pgmodeler) ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/apazga/docker-pgmodeler)
+
 This image compiles & run pgModeler inside a Docker container.
 
 ## Usage
@@ -26,11 +28,11 @@ This image compiles & run pgModeler inside a Docker container.
 
     Use it with volumes if needed (e.g. to save!):
 
-    ```docker run -ti -e DISPLAY=$DISPLAY -v F:\data\root:/root apazga/docker-pgmodeler:1.0.0-alpha1```
+    ```docker run -ti -e DISPLAY=$DISPLAY -v F:\data\root:/root apazga/docker-pgmodeler:1.0.5```
 
     You can also specify your DISPLAY IP directly if you don't want to define an environment variable:
 
-    ```docker run -ti -e DISPLAY=192.168.1.100:0.0 -v F:\data\root:/root apazga/docker-pgmodeler:1.0.0-alpha1```
+    ```docker run -ti -e DISPLAY=192.168.1.100:0.0 -v F:\data\root:/root apazga/docker-pgmodeler:1.0.5```
 
 #### Windows (PowerShell script)
 
@@ -45,6 +47,8 @@ Make a copy of the `.env.linux.example` file and name it `.env.linux`. Feel free
 Then use the provided script `run.sh`.
 
 ### MacOS
+
+Check first [this Medium post](https://yuryalencar.medium.com/pgmodeler-docker-1e78a1cd1350) and [this Gist](https://gist.github.com/yuryalencar/a6c65a1a0a01cbb90e98e66d13072efc) by [@yuryalencar](https://github.com/yuryalencar)
 
 On MacOS (following instructions tested on MacOS Big Sure), if you wish to run this image, you need to install XQuartz. With brew installed, do this:
 
@@ -87,9 +91,26 @@ If you want to build the image using the Dockerfile provided (it can take a whil
 - 0.9.4
 - 1.0.0-alpha
 - 1.0.0-alpha1
+- 1.0.0-beta
+- 1.0.0-beta1
+- 1.0.0
+- 1.0.1
+- 1.0.2
+- 1.0.3
+- 1.0.4
+- 1.1.0-alpha
+- 1.0.5
 
-Full changelog: <https://github.com/pgmodeler/pgmodeler/blob/v1.0.0-alpha1/CHANGELOG.md>
+Full changelog: <https://github.com/pgmodeler/pgmodeler/blob/v1.0.5/CHANGELOG.md>
 
+
+## Contributors
+
+ - [rbrdevs](https://github.com/rbrdevs) (PowerShell script enhancement)
+ - [Merinorus](https://github.com/Merinorus) (MacOS script & PowerShell script enhancement)
+ - [yuryalencar](https://github.com/yuryalencar) (Medium post & Gist for MacOS users)
+ 
+ 
 ## Acknowledgment
 
 Thanks [rkhaotix](https://github.com/rkhaotix) for your amazing work with pgModeler, a reference (and open source) tool to PostgreSQL community.
